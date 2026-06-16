@@ -15,7 +15,8 @@
 <body style="--fundo: #241818">
     <header class="site-header">
         <div class="brand">
-
+            <i class="fa-brands fa-algolia" style="color: rgba(255, 255, 255, 0.622);"></i>
+            <label for="#" class="brand-name">Algolia</label>
         </div>
 
         <nav class="nav-menu">
@@ -53,7 +54,34 @@
             <button> < </button>
             <button> > </button>
         </div>
+
+        <div class="text">
+            <h1 class="title1">Sabores Novos em Breve:</h1>
+        </div>
+
+        <div class="pictures">
+            <img src="img/Sabores (1).png" alt="" class="p1" data-product="Sabor 1" data-description="Defrute do nosso novo sabor exclusivo. Uma combinação perfeita de ingredientes naturais que proporciona uma experiência refrescante e única. Ideal para os momentos especiais do seu dia.">
+            <img src="img/Sabores (2).png" alt="" class="p1" data-product="Sabor 2" data-description="Experiência tropical irresistível. Feito com os melhores ingredientes selecionados, este sabor traz uma explosão de frescor em cada gole. Perfeito para compartilhar com amigos e família.">
+            <img src="img/Sabores (3).png" alt="" class="p1" data-product="Sabor 3" data-description="Frescor em cada gole. Uma bebida refrescante e saudável, desenvolvida com cuidado para oferecer o melhor sabor. Ideal para se refrescar em qualquer momento do dia.">
+        </div>
     </main>
+
+    <!-- Modal de Produto -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <div class="modal-product">
+                <img src="" alt="" class="modal-image" id="modalImage">
+                <div class="modal-info">
+                    <h2 id="modalTitle">Título do Produto</h2>
+                    <p id="modalDescription">Descrição do produto</p>
+                    <button class="btn-comprar">Comprar Agora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
 </body>
 
 </html>
