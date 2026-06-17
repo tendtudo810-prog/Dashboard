@@ -172,7 +172,7 @@ main {
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     margin-top: 140vh;
-    opacity: 70%;
+    opacity: 90%;
 }
 
 .p1 {
@@ -357,4 +357,13 @@ main {
 .foto {
     width: 300px;
     border-radius: 20px;
+}
+
+.refris {
+    text-align: center;
+    width: 100vw;
+    margin-top: 250vh;
+    opacity: 70%;
+    -webkit-mask-image: linear-gradient(to top, transparent, #101828 30%, #101828 70%, transparent);
+    mask-image: linear-gradient(to top, transparent, #101828 30%, #101828 70%, transparent);
 }
