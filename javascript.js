@@ -51,3 +51,41 @@ document.addEventListener('keydown', function(e) {
         closeModal();
     }
 });
+
+// Segunda parte do código
+const items = Array.from(document.querySelectorAll('.item'));
+let activeIndex = items.findIndex(item => item.classList.contains('active'));
+if (activeIndex === -1) {
+    activeIndex = 0;
+    items[0]?.classList.add('active');
+}
+
+function updateItems(index) {
+    items.forEach((item, idx) => {
+        item.classList.remove('active', 'hidden');
+        if (idx === index) {
+            item.classList.add('active');
+        } else if (idx === activeIndex) {
+            item.classList.add('hidden');
+        }
+    });
+    activeIndex = index;
+}
+
+function getNextIndex() {
+    return (activeIndex + 1) % items.length;
+}
+
+function startSlideshow() {
+    if (items.length <= 1) {
+        return;
+    }
+
+    updateItems(getNextIndex());
+    setInterval(() => {
+        const nextIndex = getNextIndex();
+        updateItems(nextIndex);
+    }, 4000);
+}
+
+setTimeout(startSlideshow, 4000);
